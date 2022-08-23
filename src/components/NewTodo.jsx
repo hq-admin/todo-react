@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios";
 import TodoList from './TodoList'
+import { Link } from 'react-router-dom';
 
 const NewTodo = () => {
 
@@ -114,7 +115,8 @@ const NewTodo = () => {
 
   return (
     <div>
-        <form>
+    <Link to={'/login'}>Login</Link>
+        <form style={{display:"flex", flexDirection:"column", alignItems: "center"}}>
             <input value={newTodoInput} onChange={handleChange}/>
             <button onClick={handleSubmit}>Add</button>
             { !editMode && <TodoList allTodos={allTodos} handleDeleteTodo={handleDeleteTodo} handleEditTodo={handleEditTodo}/>}

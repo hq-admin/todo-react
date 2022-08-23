@@ -6,7 +6,7 @@ const Todo = () => {
   return (
     <div>
         <NewTodo/>
-        <TodoList/>
+
     </div>
   )
 }
